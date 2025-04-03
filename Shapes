@@ -1,0 +1,33 @@
+// Abstract class Shape
+abstract class Shape {
+    // Abstract method
+    abstract void draw();
+}
+
+interface Color {
+   
+    void fillColor();
+}
+
+class Circle extends Shape implements Color {
+    @Override
+    void draw() {
+        System.out.println("Drawing a Circle");
+    }
+
+    @Override
+    public void fillColor() {
+        System.out.println("Filling the Circle with color");
+    }
+}
+
+public class Shapes {
+    public static void main(String[] args) {
+      
+        Circle circle = new Circle();
+        
+        circle.draw();
+        circle.fillColor();
+    }
+}
+
